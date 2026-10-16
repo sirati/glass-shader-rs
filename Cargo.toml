@@ -3,6 +3,7 @@ resolver = "3"
 members = [
     "crates/tile-render-shared",
     "crates/tile-render",
+    "crates/civ3-assets",
 ]
 # The shader crate is compiled by rust-gpu (pinned nightly) from
 # tile-render's build script, never by the workspace toolchain.

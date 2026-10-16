@@ -40,6 +40,8 @@
           export CC_x86_64_pc_windows_gnu=x86_64-w64-mingw32-gcc CXX_x86_64_pc_windows_gnu=x86_64-w64-mingw32-g++
           export CC_i686_pc_windows_gnu=i686-w64-mingw32-gcc CXX_i686_pc_windows_gnu=i686-w64-mingw32-g++
           export PATH=$HOME/.cargo/bin:$PATH
+          export CARGO_TARGET_X86_64_PC_WINDOWS_GNU_RUNNER=$PWD/tools/wine-run
+          export CARGO_TARGET_I686_PC_WINDOWS_GNU_RUNNER=$PWD/tools/wine-run
         '';
       };
     };
