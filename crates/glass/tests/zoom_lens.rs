@@ -571,4 +571,4 @@ fn measure_glass_divider_gpu_cost_at_4k() {
 const SHADERS: tile_render::Shaders = tile_render::Shaders::new(viewer_spirv::SPIRV, viewer_spirv::SPIRV_FALLBACK).with_effect(glass::effect);
 
 /// The oracle of a renderer drawing with the lens.
-const REFERENCE: tile_render::reference::Oracle<'static> = tile_render::reference::Oracle { effect: Some(&glass::ORACLE) };
+const REFERENCE: tile_render::reference::Oracle<'static> = tile_render::reference::Oracle { effect: Some(&glass::ORACLE), painter: None };
