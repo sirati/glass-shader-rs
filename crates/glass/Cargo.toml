@@ -1,0 +1,18 @@
+[package]
+name = "glass"
+description = "A glass lens over a tile renderer's views and screen copies: a rounded slab of glass with a halo (the renderer's view effect), its GPU passes and their CPU oracle"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+glass-shared = { path = "../glass-shared" }
+tile-render.workspace = true
+bytemuck.workspace = true
+wgpu.workspace = true
+
+[dev-dependencies]
+image.workspace = true
+pollster.workspace = true
+# The module its GPU tests draw with (it holds the lens's shaders).
+viewer-spirv.workspace = true
