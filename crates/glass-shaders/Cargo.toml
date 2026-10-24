@@ -1,0 +1,19 @@
+[package]
+name = "glass-shaders"
+description = "rust-gpu shaders of the glass lens: a rounded glass slab with a halo over a view or a screen copy (linked into viewer-shaders)"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+version = "0.1.0"
+
+[lib]
+crate-type = ["lib"]
+
+[dependencies]
+spirv-std = "0.11"
+glass-shared = { path = "../glass-shared" }
+# The canvas's colour encoding (quantized values, their biases) the lens
+# reads and writes.
+tile-render-shared = { path = "../tile-render-shared" }
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(target_arch, values("spirv"))'] }
