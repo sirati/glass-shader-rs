@@ -1,0 +1,14 @@
+[package]
+name = "glass-shared"
+description = "Parameters shared between the glass lens's host code and its rust-gpu shaders"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+
+[target.'cfg(not(target_arch = "spirv"))'.dependencies]
+bytemuck = { version = "1.24", features = ["derive"] }
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_arch, values("spirv"))'] }
