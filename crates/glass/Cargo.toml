@@ -14,5 +14,5 @@ wgpu.workspace = true
 [dev-dependencies]
 image.workspace = true
 pollster.workspace = true
-# The module its GPU tests draw with (it holds the lens's shaders).
-viewer-spirv.workspace = true
+# The independent test module holds tile and glass shaders, without the viewer.
+glass-test-spirv = { path = "../glass-test-spirv" }

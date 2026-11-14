@@ -1,0 +1,17 @@
+[package]
+name = "glass-test-shaders"
+description = "Shader entry points used by an independent library's GPU tests"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+version = "0.1.0"
+publish = false
+
+[lib]
+crate-type = ["dylib", "lib"]
+
+[dependencies]
+tile-render-shaders = { path = "../tile-render-shaders" }
+glass-shaders = { path = "../glass-shaders" }
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(target_arch, values("spirv"))'] }

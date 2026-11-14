@@ -192,4 +192,4 @@ fn zoom_at_mouse_at_pixel_scale_2_looks_the_same_in_both_formats() {
 }
 
 /// The viewer's shader module (it holds the lens's shaders), drawing with the lens.
-const SHADERS: tile_render::Shaders = tile_render::Shaders::new(viewer_spirv::SPIRV, viewer_spirv::SPIRV_FALLBACK).with_effect(glass::effect);
+const SHADERS: tile_render::Shaders = tile_render::Shaders::new(glass_test_spirv::SPIRV, glass_test_spirv::SPIRV_FALLBACK).with_effect(glass::effect);
